@@ -5,7 +5,7 @@ COPY package.json pnpm-lock.yaml ./
 RUN pnpm install --frozen-lockfile --no-strict-peer-dependencies || pnpm install --no-strict-peer-dependencies
 
 # Build arg for API URL
-ARG VITE_API_URL=https://api.zuhudo.cc.cd
+ARG VITE_API_URL=https://api.zuhudo.cc.cd/api
 ENV VITE_API_URL=$VITE_API_URL
 
 COPY . .
